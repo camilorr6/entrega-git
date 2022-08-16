@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(19, 19, 70);
+    background-color: rgb(210, 210, 210);
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    body .noMobile{
+        display: none;
+    }
+
+    body header{
+        background-color: rgb(89, 132, 212);
+        width: 100%;
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0;
+    }
+    
+    body .logo {
+        width: 100%;
+        margin: 0.7rem;
+        height: auto;
+        padding: 0;
+    }
+    
+    body .logIn{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+    }
+
+    button{
+        width: 50%;
+    }
+
+    body .welcome{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 0.3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body .slogan{
+        padding: 0.4rem;
+        width: 100%;
+    }
+    
+    body .slogan h1{
+        font-size: 4rem;
+    }
+    
+    body .fotoLocal{
+        margin: 0 2rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    body .catalogoInicio {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .displayArticulos{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .catalogoInicio .displayArticulos .ventanaArticulo a{
+        color:white
+    }
+    
+    
+    body .ventanaArticulo{
+        width: 30%;
+        border-radius: 5%;
+        background-color: rgb(89, 132, 212);
+        padding: 1rem;
+        align-items: center;
+    }
+    
+    .fotoArticulo{
+        width: 90%;;
+    }
+
+    body .catalogoArticulos {
+        display: grid;
+        margin: 2rem 0;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "ventanaArticuloC ventanaArticuloC ventanaArticuloC";
+        gap: 1rem
+    }
+
+}
+
+/*grid index*/
+
+.contenedorIndex{
+    background-color: rgb(210, 210, 210);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.4fr 3fr 2fr 0.5fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "welcome"
+    "section"
+    "footer";
+}
+
+/*estilos header*/
+
+header{
+    background-color: rgb(89, 132, 212);
+    width: 100%;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.logo {
+    max-width: 60%;
+    height: auto;
+    padding: 1rem;
+
+}
+
+.busquedaRapida {
+    width: 25%;
+    height: 3rem;    
+    border-radius: 25px;
+    border-style: solid;
+    text-indent: 2rem;
+}
+
+.logIn{
+    min-width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    padding: 0.4rem 1rem;
+    margin: 0.8rem;
+    background-color: rgb(141, 176, 241);
+    border-style: solid;
+    border-color: white;
+    border-radius: 5%;
+}
+
+button:hover,
+  button:focus-within {
+    background-color: rgb(89, 132, 212);
+    cursor: pointer;
+  }
+  
+  button:focus-within a {
+    outline: none;
+  }
+/* estilos del nav*/
+
+
+
+nav{
+    position: sticky;
+    top:0;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: underline;
+  }
+  
+a:active {
+    text-decoration: underline;
+  }
+  
+a {
+     color: white;
+     text-decoration: none;
+  }
+
+ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+  }
+  
+li {
+    color: white;
+    background-color: rgb(141, 176, 241);
+    min-width: 20%;
+    float: left;
+    padding: 1rem 0;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+  
+  li:hover,
+  li:focus-within {
+    background-color: rgb(89, 132, 212);
+    cursor: pointer;
+  }
+  
+  li:focus-within a {
+    outline: none;
+  }
+  
+  ul li:hover > ul,
+  ul li:focus-within > ul{
+    background-color: rgb(89, 132, 212);
+     visibility: visible;
+     opacity: 1;
+     display: block;
+  }
+  
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+
+  /* main index*/
+
+.welcome{
+    display: flex;
+    width: auto;
+    margin: 0 2rem;
+    gap: 4rem; 
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan{
+    width: 50%;
+}
+
+.slogan h1{
+    font-size: 5rem;
+}
+
+.fotoLocal{
+    margin: 0 2rem;
+    padding: 2rem;
+    width: 50%;
+}
+
+
+/* section index*/
+.catalogoInicio{
+    grid-area: section;
+    margin: 2rem;
+}
+
+.catalogoInicio .tituloSection{
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+.catalogoInicio div a{
+    color: rgb(19, 19, 70);
+}
+
+.displayArticulos{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.catalogoInicio .displayArticulos .ventanaArticulo a{
+    color:white
+}
+
+
+.ventanaArticulo{
+    width: 20%;
+    border-radius: 5%;
+    background-color: rgb(89, 132, 212);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fotoArticulo{
+    width: 90%;;
+}
+
+/* estilo general footer*/
+
+footer {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    margin-top: 3rem;
+    color: white;
+    background-color: rgb(89, 132, 212) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-area: footer;
+}
+
+/* estilos catalogo*/
+
+.contenedorCatalogo{
+    background-color: rgb(210, 210, 210);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.1fr 4.4fr 0.2fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "catalogo"
+    "footer";
+}
+
+.catalogo{
+    grid-area: catalogo;
+    margin: 2rem;
+}
+
+.catalogoArticulos {
+    display: grid;
+    margin: 2rem 0;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC";
+    gap: 1rem
+}
+
+.ventanaArticuloC{
+    width: 100%;
+    border-radius: 5%;
+    background-color: rgb(89, 132, 212);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: "ventanaArtiucloC";
+}
