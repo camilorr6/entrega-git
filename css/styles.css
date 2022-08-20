@@ -83,6 +83,19 @@ body{
         gap: 1rem
     }
     
+    body .contenedorContacto{
+        flex-direction: column;
+    }
+
+    body .mapa{
+        width: 100%;
+    }
+    .mensajero input{
+        width: 50%;
+    }
+    body .mensaje{
+        height: 15vw;
+    }
 }
 
 /*grid index*/
@@ -93,7 +106,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 3fr 2fr 0.5fr;
+    grid-template-rows: 0.4fr 2fr 1fr 0.4fr;
     grid-template-areas: 
     "header"
     "welcome"
@@ -110,6 +123,7 @@ header{
 }
 
 .welcome{
+    grid-area: welcome;
     display: flex;
     width: auto;
     margin: 0 2rem;
@@ -153,7 +167,7 @@ header{
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .catalogoInicio .displayArticulos .ventanaArticulo a{
@@ -194,12 +208,12 @@ footer {
 /* estilos catalogo*/
 
 .contenedorCatalogo{
-    background-color: rgb(210, 210, 210);
     width: 100%;
     height: 100%;
+    margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.1fr 4.4fr 0.2fr;
+    grid-template-rows: 0.3fr 4.2fr 0.2fr;
     grid-template-areas: 
     "header"
     "catalogo"
@@ -221,6 +235,9 @@ footer {
         "ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC";
     gap: 1rem
 }
+.catalogoArticulos a{
+ color: white;
+}
 
 .ventanaArticuloC{
     width: 100%;
@@ -236,4 +253,58 @@ footer {
 .bg-agregar{
     background-color: rgb(89, 132, 212);
     border-radius: 10px;
+}
+
+/* estilos contactos*/
+
+.contenedorContacto{
+    display: flex;
+    width: 100%;
+}
+
+.mapa{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+}
+
+.googleMaps{
+    height: 30vw
+}
+
+.mediosContacto{
+    padding: 2rem;
+
+}
+
+.mediosContacto h3{
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.mediosContacto p{
+
+    text-align: center;
+}
+
+.mediosContacto fieldset{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.mensajero{
+    display: flex;
+    justify-content: space-between;
+}
+.mensajero input{
+    margin-bottom: 1rem;
+    width: 40%;
+}
+
+.mensaje{
+    height: 7vw;
+    margin-top: 2rem;
 }
