@@ -10,7 +10,6 @@ body{
     width: 100%;
     font-family: 'Bebas Neue', cursive;
     color: rgb(19, 19, 70);
-    background-color: rgb(210, 210, 210);
 }
 
 @media (min-width: 320px) and (max-width: 768px){
@@ -34,6 +33,7 @@ body{
     
     body .slogan h1{
         font-size: 4rem;
+
     }
     
     body .fotoLocal{
@@ -56,9 +56,9 @@ body{
     }
     
     .catalogoInicio .displayArticulos .ventanaArticulo a{
-        color:white
-    }
-    
+        color:white;
+        font-size: 1rem;
+    }    
     
     body .ventanaArticulo{
         width: 30%;
@@ -69,20 +69,17 @@ body{
     }
     
     .fotoArticulo{
-        width: 90%;;
+        width: 90%;
     }
 
     body .catalogoArticulos {
         display: grid;
-        margin: 2rem 0;
-        width: 100%;
-        height: 100%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
             "ventanaArticuloC ventanaArticuloC ventanaArticuloC";
-        gap: 1rem
+        gap: 1rem;
     }
-    
+
     body .contenedorContacto{
         flex-direction: column;
     }
@@ -96,17 +93,29 @@ body{
     body .mensaje{
         height: 15vw;
     }
+
+    body .fondoServicios{
+        height: 80vw;
+}
+
+    body .opcionesServicios{
+        flex-direction: column;
+        margin: 1rem;
+        gap: 1rem;
+    }
+    body .cartaServicios{
+        width: 100%;
+    }
 }
 
 /*grid index*/
 
 .contenedorIndex{
-    background-color: rgb(210, 210, 210);
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 2fr 1fr 0.4fr;
+    grid-template-rows: 0.2fr 1.2fr 0.7fr 0.4fr;
     grid-template-areas: 
     "header"
     "welcome"
@@ -207,27 +216,13 @@ footer {
 
 /* estilos catalogo*/
 
-.contenedorCatalogo{
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 4.2fr 0.2fr;
-    grid-template-areas: 
-    "header"
-    "catalogo"
-    "footer";
-}
-
 .catalogo{
-    grid-area: catalogo;
-    margin: 2rem;
+    padding: 2rem;
+    width: 100%;
 }
 
 .catalogoArticulos {
     display: grid;
-    margin: 2rem 0;
     width: 100%;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -240,7 +235,7 @@ footer {
 }
 
 .ventanaArticuloC{
-    width: 100%;
+    width: 90%;
     border-radius: 5%;
     background-color: rgb(89, 132, 212);
     padding: 2rem;
@@ -254,6 +249,7 @@ footer {
     background-color: rgb(89, 132, 212);
     border-radius: 10px;
 }
+
 
 /* estilos contactos*/
 
@@ -307,4 +303,57 @@ footer {
 .mensaje{
     height: 7vw;
     margin-top: 2rem;
+}
+
+/*estilos servicios*/
+.fondoServicios{
+  background-image: url(https://ferretero.com/wp-content/uploads/2020/03/ferreteria.jpg);
+  height: 30vw;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoServicios{
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid white;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 80%;
+  padding: 1.3rem;
+  text-align: center;
+}
+
+.opcionesServicios{
+    display: flex;
+    justify-content: space-around;
+}
+
+.loQueNecesitas{
+    text-align: center;
+    margin: 1rem;
+}
+
+.cartaServicios{
+    background-color: rgb(28, 28, 105);
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    height: 20rem;
+}
+
+.cartaServicios img{
+    width: 50%;
 }
