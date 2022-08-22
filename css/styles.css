@@ -106,6 +106,33 @@ body{
     body .cartaServicios{
         width: 100%;
     }
+
+    body .catalogo{
+        padding: 0.1rem
+    }
+
+    body .catalogo .catalogoArticulos{
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body .catalogo .catalogoArticulos .ventanaArticuloC{
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem;
+        border-radius: 0;
+        gap: 1rem;
+    }
+
+    body .catalogo .catalogoArticulos .ventanaArticuloC img{
+        width: 20%;
+        border-radius: 10px;
+    }
+
+
 }
 
 /*grid index*/
@@ -237,12 +264,16 @@ footer {
 .ventanaArticuloC{
     width: 90%;
     border-radius: 5%;
-    background-color: rgb(89, 132, 212);
+    background-color: rgb(28, 28, 105);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: "ventanaArtiucloC";
+}
+
+body .catalogo .catalogoArticulos .ventanaArticuloC a{
+    text-decoration: none;
 }
 
 .bg-agregar{
