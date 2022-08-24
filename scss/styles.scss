@@ -1,0 +1,174 @@
+@import "base/variables";
+
+@media (min-width: 320px) and (max-width: 768px){
+    body {
+        .contenedorIndex{
+        .noMobile{
+            display: none;
+    }
+        .welcome{
+            display: flex;
+            flex-direction: column;
+            margin: 0.3rem;
+            justify-content: center;
+            align-items: center;
+            .slogan{
+                padding: 0.4rem;
+                width: 100%;
+                h1{
+                    font-size: 4rem;
+                }
+            }
+            .fotoLocal{
+                margin: 0 2rem;
+                padding: 0;
+                width: 100%;
+            }
+        }
+        }
+    }
+;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+        body{
+            width: 100%;
+            .bg-menu{
+                background-color: $color-primario;
+            }
+            /*estilos index*/
+            .contenedorIndex{  
+                                width: 100%;
+                                height: 100%;
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                grid-template-rows: 0.2fr 1.2fr 0.7fr 0.4fr;
+                                grid-template-areas: 
+                                "header"
+                                "welcome"
+                                "section"
+                                "footer";
+                                header{
+                                    grid-area: header;
+                                }
+                                .welcome{
+                                    grid-area: welcome;
+                                    display: flex;
+                                    width: auto;
+                                    margin: 0 2rem;
+                                    gap: 4rem; 
+                                    justify-content: center;
+                                    align-items: center;
+                                    .slogan{
+                                        width: 50%;
+                                        color: $color-titulo;
+                                        .slogan h1{
+                                            font-size: 7rem;
+                                        }
+                                    }
+                                    .fotoLocal{
+                                        margin: 0 2rem;
+                                        padding: 2rem;
+                                        width: 50%;
+                                    }
+                                }
+                                .catalogoInicio{
+                                    grid-area: section;
+                                    margin: 2rem;
+                                    .tituloSection{
+                                                    margin-bottom: 2rem;
+                                                    font-size: 1.3rem;
+                                                    color: $color-titulo;
+                                                    a:link{
+                                                        color: $color-titulo;
+                                                        text-decoration: none;
+                                                    }
+                                                    a:visited {
+                                                        color: $color-titulo;
+                                                        text-decoration: none;                        
+                                                    }
+                                                    
+                                                    a:hover {
+                                                        color: $color-titulo;
+                                                        text-decoration: none;
+                                                    }
+                                                    
+                                                    a:active {
+                                                        color: $color-titulo;
+                                                        text-decoration: none;
+                                                    }
+                                                 }
+                                    .displayArticulos{
+                                                        display: flex;
+                                                        width: 100%;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        gap: 1rem;
+
+                                                        .catalogoInicio .displayArticulos .ventanaArticulo a{
+                                                            color:$texto-cards
+                                                        } 
+                                                        .ventanaArticulo{
+                                                            width: 20%;
+                                                            border-radius: 5%;
+                                                            background-color: $color-primario;
+                                                            padding: 2rem;
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            align-items: center;
+                                                            a:link{
+                                                                color: $texto-cards;
+                                                                text-decoration: none;
+                                                            }
+                                                            a:visited {
+                                                                color: $texto-cards;
+                                                                text-decoration: none;                        
+                                                            }
+                                                            
+                                                            a:hover {
+                                                                color: $texto-cards;
+                                                                text-decoration: none;
+                                                            }
+                                                            
+                                                            a:active {
+                                                                color: $texto-cards;
+                                                                text-decoration: none;
+                                                            }    
+                                                        }
+                                                        .fotoArticulo{
+                                                            width: 90%;;
+                                                        }
+                                                        
+                                                                                                              
+                                                    }
+      
+                                    }
+                                    footer {
+                                        font-size: 1rem;
+                                        padding: 0.5rem 0;
+                                        margin-top: 3rem;
+                                        color: $texto-cards;
+                                        background-color: $color-primario ;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        text-align: center;
+                                        grid-area: footer;
+                                    }
+                                    
+
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                                
+                            }
+                            
+                
+    }
+}

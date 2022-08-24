@@ -1,390 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-*{
+@media (min-width: 320px) and (max-width: 768px) {
+  body .contenedorIndex .noMobile {
+    display: none; }
+  body .contenedorIndex .welcome {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+    justify-content: center;
+    align-items: center; }
+    body .contenedorIndex .welcome .slogan {
+      padding: 0.4rem;
+      width: 100%; }
+      body .contenedorIndex .welcome .slogan h1 {
+        font-size: 4rem; }
+    body .contenedorIndex .welcome .fotoLocal {
+      margin: 0 2rem;
+      padding: 0;
+      width: 100%; }
+  * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    width: 100%;
-    font-family: 'Bebas Neue', cursive;
-    color: rgb(19, 19, 70);
-}
-
-@media (min-width: 320px) and (max-width: 768px){
-    body .noMobile{
-        display: none;
-    }
-
-    body .welcome{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        margin: 0.3rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    body .slogan{
-        padding: 0.4rem;
+    box-sizing: border-box; }
+    * body {
+      width: 100%;
+      /*estilos index*/ }
+      * body .bg-menu {
+        background-color: #739dec; }
+      * body .contenedorIndex {
         width: 100%;
-    }
-    
-    body .slogan h1{
-        font-size: 4rem;
-
-    }
-    
-    body .fotoLocal{
-        margin: 0 2rem;
-        padding: 0;
-        width: 100%;
-    }
-
-    body .catalogoInicio {
-        margin: 1rem 0;
-        width: 100%;
-    }
-    
-    .displayArticulos{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    
-    .catalogoInicio .displayArticulos .ventanaArticulo a{
-        color:white;
-        font-size: 1rem;
-    }    
-    
-    body .ventanaArticulo{
-        width: 30%;
-        border-radius: 5%;
-        background-color: rgb(89, 132, 212);
-        padding: 1rem;
-        align-items: center;
-    }
-    
-    .fotoArticulo{
-        width: 90%;
-    }
-
-    body .catalogoArticulos {
+        height: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
-            "ventanaArticuloC ventanaArticuloC ventanaArticuloC";
-        gap: 1rem;
-    }
-
-    body .contenedorContacto{
-        flex-direction: column;
-    }
-
-    body .mapa{
-        width: 100%;
-    }
-    .mensajero input{
-        width: 50%;
-    }
-    body .mensaje{
-        height: 15vw;
-    }
-
-    body .fondoServicios{
-        height: 80vw;
-}
-
-    body .opcionesServicios{
-        flex-direction: column;
-        margin: 1rem;
-        gap: 1rem;
-    }
-    body .cartaServicios{
-        width: 100%;
-    }
-
-    body .catalogo{
-        padding: 0.1rem
-    }
-
-    body .catalogo .catalogoArticulos{
-        display: flex;
-        flex-direction: column; 
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    body .catalogo .catalogoArticulos .ventanaArticuloC{
-        display: flex;
-        flex-direction: row;
-        padding: 0.5rem;
-        border-radius: 0;
-        gap: 1rem;
-    }
-
-    body .catalogo .catalogoArticulos .ventanaArticuloC img{
-        width: 20%;
-        border-radius: 10px;
-    }
-
-
-}
-
-/*grid index*/
-
-.contenedorIndex{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.2fr 0.7fr 0.4fr;
-    grid-template-areas: 
-    "header"
-    "welcome"
-    "section"
-    "footer";
-}
-
-.bg-menu{
-    background-color: rgb(89, 132, 212);
-}
-
-header{
-    grid-area: header;
-}
-
-.welcome{
-    grid-area: welcome;
-    display: flex;
-    width: auto;
-    margin: 0 2rem;
-    gap: 4rem; 
-    justify-content: center;
-    align-items: center;
-}
-
-.slogan{
-    width: 50%;
-}
-
-.slogan h1{
-    font-size: 5rem;
-}
-
-.fotoLocal{
-    margin: 0 2rem;
-    padding: 2rem;
-    width: 50%;
-}
-
-
-/* section index*/
-.catalogoInicio{
-    grid-area: section;
-    margin: 2rem;
-}
-
-.catalogoInicio .tituloSection{
-    margin-bottom: 2rem;
-    font-size: 1.3rem;
-}
-
-.catalogoInicio div a{
-    color: rgb(19, 19, 70);
-}
-
-.displayArticulos{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.catalogoInicio .displayArticulos .ventanaArticulo a{
-    color:white
-}
-
-
-.ventanaArticulo{
-    width: 20%;
-    border-radius: 5%;
-    background-color: rgb(89, 132, 212);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fotoArticulo{
-    width: 90%;;
-}
-
-/* estilo general footer*/
-
-footer {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    margin-top: 3rem;
-    color: white;
-    background-color: rgb(89, 132, 212) ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    grid-area: footer;
-}
-
-/* estilos catalogo*/
-
-.catalogo{
-    padding: 2rem;
-    width: 100%;
-}
-
-.catalogoArticulos {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC";
-    gap: 1rem
-}
-.catalogoArticulos a{
- color: white;
-}
-
-.ventanaArticuloC{
-    width: 90%;
-    border-radius: 5%;
-    background-color: rgb(28, 28, 105);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: "ventanaArtiucloC";
-}
-
-body .catalogo .catalogoArticulos .ventanaArticuloC a{
-    text-decoration: none;
-}
-
-.bg-agregar{
-    background-color: rgb(89, 132, 212);
-    border-radius: 10px;
-}
-
-
-/* estilos contactos*/
-
-.contenedorContacto{
-    display: flex;
-    width: 100%;
-}
-
-.mapa{
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 1rem;
-}
-
-.googleMaps{
-    height: 30vw
-}
-
-.mediosContacto{
-    padding: 2rem;
-
-}
-
-.mediosContacto h3{
-    margin-bottom: 1rem;
-    text-align: center;
-    text-decoration: underline;
-}
-
-.mediosContacto p{
-
-    text-align: center;
-}
-
-.mediosContacto fieldset{
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-}
-.mensajero{
-    display: flex;
-    justify-content: space-between;
-}
-.mensajero input{
-    margin-bottom: 1rem;
-    width: 40%;
-}
-
-.mensaje{
-    height: 7vw;
-    margin-top: 2rem;
-}
-
-/*estilos servicios*/
-.fondoServicios{
-  background-image: url(https://ferretero.com/wp-content/uploads/2020/03/ferreteria.jpg);
-  height: 30vw;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.textoServicios{
-  background-color: rgba(0,0,0, 0.4); 
-  color: white;
-  font-weight: bold;
-  border: 3px solid white;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 80%;
-  padding: 1.3rem;
-  text-align: center;
-}
-
-.opcionesServicios{
-    display: flex;
-    justify-content: space-around;
-}
-
-.loQueNecesitas{
-    text-align: center;
-    margin: 1rem;
-}
-
-.cartaServicios{
-    background-color: rgb(28, 28, 105);
-    width: 24%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    height: 20rem;
-}
-
-.cartaServicios img{
-    width: 50%;
-}
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1.2fr 0.7fr 0.4fr;
+        grid-template-areas: "header" "welcome" "section" "footer"; }
+        * body .contenedorIndex header {
+          grid-area: header; }
+        * body .contenedorIndex .welcome {
+          grid-area: welcome;
+          display: flex;
+          width: auto;
+          margin: 0 2rem;
+          gap: 4rem;
+          justify-content: center;
+          align-items: center; }
+          * body .contenedorIndex .welcome .slogan {
+            width: 50%;
+            color: #131346; }
+            * body .contenedorIndex .welcome .slogan .slogan h1 {
+              font-size: 7rem; }
+          * body .contenedorIndex .welcome .fotoLocal {
+            margin: 0 2rem;
+            padding: 2rem;
+            width: 50%; }
+        * body .contenedorIndex .catalogoInicio {
+          grid-area: section;
+          margin: 2rem; }
+          * body .contenedorIndex .catalogoInicio .tituloSection {
+            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            color: #131346; }
+            * body .contenedorIndex .catalogoInicio .tituloSection a:link {
+              color: #131346;
+              text-decoration: none; }
+            * body .contenedorIndex .catalogoInicio .tituloSection a:visited {
+              color: #131346;
+              text-decoration: none; }
+            * body .contenedorIndex .catalogoInicio .tituloSection a:hover {
+              color: #131346;
+              text-decoration: none; }
+            * body .contenedorIndex .catalogoInicio .tituloSection a:active {
+              color: #131346;
+              text-decoration: none; }
+          * body .contenedorIndex .catalogoInicio .displayArticulos {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem; }
+            * body .contenedorIndex .catalogoInicio .displayArticulos .catalogoInicio .displayArticulos .ventanaArticulo a {
+              color: white; }
+            * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo {
+              width: 20%;
+              border-radius: 5%;
+              background-color: #739dec;
+              padding: 2rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center; }
+              * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo a:link {
+                color: white;
+                text-decoration: none; }
+              * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo a:visited {
+                color: white;
+                text-decoration: none; }
+              * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo a:hover {
+                color: white;
+                text-decoration: none; }
+              * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo a:active {
+                color: white;
+                text-decoration: none; }
+            * body .contenedorIndex .catalogoInicio .displayArticulos .fotoArticulo {
+              width: 90%; }
+        * body .contenedorIndex footer {
+          font-size: 1rem;
+          padding: 0.5rem 0;
+          margin-top: 3rem;
+          color: white;
+          background-color: #739dec;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          grid-area: footer; } }
