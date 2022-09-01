@@ -1,33 +1,5 @@
-@import "base/variables";
-
-@media (min-width: 320px) and (max-width: 768px){
-    body {
-        .contenedorIndex{
-        .noMobile{
-            display: none;
-    }
-        .welcome{
-            display: flex;
-            flex-direction: column;
-            margin: 0.3rem;
-            justify-content: center;
-            align-items: center;
-            .slogan{
-                padding: 0.4rem;
-                width: 100%;
-                h1{
-                    font-size: 4rem;
-                }
-            }
-            .fotoLocal{
-                margin: 0 2rem;
-                padding: 0;
-                width: 100%;
-            }
-        }
-        }
-    }
-;
+@import "base/listas";
+@import "base/mixin";
 
 *{
     padding: 0;
@@ -36,34 +8,23 @@
         body{
             width: 100%;
             .bg-menu{
-                background-color: $color-primario;
+                background-color: $colores;
             }
             /*estilos index*/
             .contenedorIndex{  
                                 width: 100%;
                                 height: 100%;
-                                display: grid;
-                                grid-template-columns: 1fr;
-                                grid-template-rows: 0.2fr 1.2fr 0.7fr 0.4fr;
-                                grid-template-areas: 
-                                "header"
-                                "welcome"
-                                "section"
-                                "footer";
+                                @include display(flex, column, auto, center);
                                 header{
-                                    grid-area: header;
+                                    background-color: nth($colores, 2);
                                 }
                                 .welcome{
-                                    grid-area: welcome;
-                                    display: flex;
-                                    width: auto;
+                                    @include display(flex, row, center, center);
                                     margin: 0 2rem;
                                     gap: 4rem; 
-                                    justify-content: center;
-                                    align-items: center;
                                     .slogan{
                                         width: 50%;
-                                        color: $color-titulo;
+                                        color: nth($colores, 1);
                                         .slogan h1{
                                             font-size: 7rem;
                                         }
@@ -75,67 +36,65 @@
                                     }
                                 }
                                 .catalogoInicio{
-                                    grid-area: section;
                                     margin: 2rem;
                                     .tituloSection{
                                                     margin-bottom: 2rem;
                                                     font-size: 1.3rem;
-                                                    color: $color-titulo;
+                                                    color: nth($colores, 1);
                                                     a:link{
-                                                        color: $color-titulo;
+                                                        color:nth($colores, 1);
                                                         text-decoration: none;
                                                     }
                                                     a:visited {
-                                                        color: $color-titulo;
+                                                        color: nth($colores, 1);
                                                         text-decoration: none;                        
                                                     }
                                                     
                                                     a:hover {
-                                                        color: $color-titulo;
+                                                        color: nth($colores, 1);
                                                         text-decoration: none;
                                                     }
                                                     
                                                     a:active {
-                                                        color: $color-titulo;
+                                                        color: nth($colores, 1);
                                                         text-decoration: none;
                                                     }
                                                  }
                                     .displayArticulos{
-                                                        display: flex;
+                                                        @include display(flex, row, center, center);
                                                         width: 100%;
-                                                        align-items: center;
-                                                        justify-content: center;
                                                         gap: 1rem;
 
                                                         .catalogoInicio .displayArticulos .ventanaArticulo a{
-                                                            color:$texto-cards
+                                                            color:nth($colores, 3)
                                                         } 
                                                         .ventanaArticulo{
                                                             width: 20%;
                                                             border-radius: 5%;
-                                                            background-color: $color-primario;
+                                                            background-color: nth($colores, 4);
                                                             padding: 2rem;
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            align-items: center;
+                                                            @include display(flex, column, auto, center);
                                                             a:link{
-                                                                color: $texto-cards;
+                                                                color: nth($colores, 3);
                                                                 text-decoration: none;
                                                             }
                                                             a:visited {
-                                                                color: $texto-cards;
+                                                                color: nth($colores, 3);
                                                                 text-decoration: none;                        
                                                             }
                                                             
                                                             a:hover {
-                                                                color: $texto-cards;
+                                                                color: nth($colores, 3);
                                                                 text-decoration: none;
                                                             }
                                                             
                                                             a:active {
-                                                                color: $texto-cards;
+                                                                color: nth($colores, 3);
                                                                 text-decoration: none;
-                                                            }    
+                                                            } 
+                                                            p{
+                                                                color: nth($colores, 3);
+                                                            }   
                                                         }
                                                         .fotoArticulo{
                                                             width: 90%;;
@@ -147,16 +106,12 @@
                                     }
                                     footer {
                                         font-size: 1rem;
+                                        width: 100%;
                                         padding: 0.5rem 0;
                                         margin-top: 3rem;
-                                        color: $texto-cards;
-                                        background-color: $color-primario ;
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-                                        align-items: center;
-                                        text-align: center;
-                                        grid-area: footer;
+                                        color: nth($colores, 3);
+                                        background-color: nth($colores, 2) ;
+                                        @include display(flex, column, center, center);
                                     }
                                     
 
@@ -168,7 +123,6 @@
                                 
                                 
                             }
-                            
+                                      
                 
     }
-}
