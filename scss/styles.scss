@@ -1,5 +1,6 @@
 @import "base/listas";
 @import "base/mixin";
+@import "base/extend";
 
 *{
     padding: 0;
@@ -7,9 +8,6 @@
     box-sizing: border-box;
         body{
             width: 100%;
-            .bg-menu{
-                background-color: $colores;
-            }
             /*estilos index*/
             .contenedorIndex{  
                                 width: 100%;
@@ -20,7 +18,7 @@
                                 }
                                 .welcome{
                                     @include display(flex, row, center, center);
-                                    margin: 0 2rem;
+                                    @extend %w-main;
                                     gap: 4rem; 
                                     .slogan{
                                         width: 50%;
@@ -36,7 +34,7 @@
                                     }
                                 }
                                 .catalogoInicio{
-                                    margin: 2rem;
+                                    @extend %w-main;
                                     .tituloSection{
                                                     margin-bottom: 2rem;
                                                     font-size: 1.3rem;
