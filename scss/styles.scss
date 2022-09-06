@@ -163,7 +163,7 @@ a{
                                           }
                                         }
                                       }
-                                      section{
+                                      .ayudas{
                                         margin-top: 2rem;
                                         color: nth($colores, 1);
                                         .loQueNecesitas{
@@ -199,10 +199,11 @@ a{
 
                                         }
                                         
-                                      }
+                                      }}
                                       //estilos contacto
                                       .contenedorContacto{
                                         display: flex;
+                                        flex-direction: row;
                                         width: 100%;
                                         .mapa{
                                             padding: 2rem;
@@ -316,49 +317,48 @@ a{
         .noMobile{
             display: none;
         }
-        .contenedorIndex{
-       
-        .welcome{
-            display: flex;
-            flex-direction: column;
-            width: auto;
-            margin: 0.3rem;
-            justify-content: center;
-            align-items: center;
-            .fotoLocal{
-                margin: 0 2rem;
-                padding: 0;
-                width: 100%;
-            }
-            .slogan{
-                padding: 0.4rem;
-                width: 100%;
-            }
-        }
-        
-            .catalogoInicio {
-                margin: 1rem 0;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                .displayArticulos{
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 0.5rem;
-                    .ventanaArticulo{
-                        width: 100%;
-                        padding: 1rem;
-                        img{
-                            width: 50%;
+        .contenedorIndex{   
+                        .welcome{
+                            display: flex;
+                            flex-direction: column;
+                            width: auto;
+                            margin: 0.3rem;
+                            justify-content: center;
+                            align-items: center;
+                            .fotoLocal{
+                                margin: 0 2rem;
+                                padding: 0;
+                                width: 100%;
+                            }
+                            .slogan{
+                                padding: 0.4rem;
+                                width: 100%;
+                            }
+                        }
+                        
+                            .catalogoInicio {
+                                margin: 1rem 0;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                .displayArticulos{
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 0.5rem;
+                                    .ventanaArticulo{
+                                        width: 100%;
+                                        padding: 1rem;
+                                        img{
+                                            width: 50%;
+                                        }
+                                    }
+                            }
+                            
                         }
                     }
-            }
-            
-        }
-    }
         .contenedorContacto{
             flex-direction: column;
             .mapa{
@@ -371,7 +371,7 @@ a{
                 height: 15vw;
             }
         }
-        section{
+        .ayudas{
         .opcionesServicios{
             flex-direction: column;
             margin: 1rem;
@@ -407,4 +407,4 @@ a{
     
         }
         
-    }}}
+    }}
