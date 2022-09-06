@@ -1,38 +1,50 @@
-* body .contenedorIndex .welcome, * body .contenedorIndex .catalogoInicio {
-  margin: 2rem;
-  width: 100%; }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
   * body {
     width: 100%;
-    /*estilos index*/ }
-    * body .contenedorIndex {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+    align-items: center; }
+    * body header {
+      background-color: #739dec;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; }
+    * body footer {
+      font-size: 1rem;
       width: 100%;
-      height: 100%;
+      padding: 0.5rem 0;
+      margin-top: 3rem;
+      color: white;
+      background-color: #739dec;
       display: flex;
       flex-direction: column;
-      justify-content: auto;
+      justify-content: center;
       align-items: center; }
-      * body .contenedorIndex header {
-        background-color: #739dec; }
-      * body .contenedorIndex .welcome {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem; }
-        * body .contenedorIndex .welcome .slogan {
-          width: 50%;
-          color: #131346; }
-          * body .contenedorIndex .welcome .slogan .slogan h1 {
-            font-size: 7rem; }
-        * body .contenedorIndex .welcome .fotoLocal {
-          margin: 0 2rem;
-          padding: 2rem;
-          width: 50%; }
+    * body .contenedorIndex .welcome {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      width: 100%;
+      gap: 4rem; }
+      * body .contenedorIndex .welcome .slogan {
+        width: 50%;
+        color: #131346; }
+        * body .contenedorIndex .welcome .slogan .slogan h1 {
+          font-size: 7rem;
+          font-weight: bold; }
+      * body .contenedorIndex .welcome .fotoLocal {
+        margin: 0 2rem;
+        padding: 2rem;
+        width: 50%;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; }
+    * body .contenedorIndex .catalogoInicio {
+      padding: 2rem;
+      width: 100%; }
       * body .contenedorIndex .catalogoInicio .tituloSection {
         margin-bottom: 2rem;
         font-size: 1.3rem;
@@ -56,13 +68,15 @@
         align-items: center;
         width: 100%;
         gap: 1rem; }
-        * body .contenedorIndex .catalogoInicio .displayArticulos .catalogoInicio .displayArticulos .ventanaArticulo a {
+        * body .contenedorIndex .catalogoInicio .displayArticulos a {
           color: white; }
         * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo {
           width: 20%;
           border-radius: 5%;
           background-color: #1c1c69;
           padding: 2rem;
+          transition: all .2s ease-in-out;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           display: flex;
           flex-direction: column;
           justify-content: auto;
@@ -81,16 +95,206 @@
             text-decoration: none; }
           * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo p {
             color: white; }
+        * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo:hover {
+          transform: scale(0.9);
+          background-color: #5984d4; }
         * body .contenedorIndex .catalogoInicio .displayArticulos .fotoArticulo {
           width: 90%; }
-      * body .contenedorIndex footer {
-        font-size: 1rem;
+    * body .bg-agregar {
+      background-color: #5984d4;
+      border-radius: 10px;
+      text-align: center; }
+    * body .contenedorServicios {
+      margin-top: 2rem;
+      width: 100%;
+      height: 50vh; }
+      * body .contenedorServicios .fondoServicios {
+        background-image: url(https://ferretero.com/wp-content/uploads/2020/03/ferreteria.jpg);
+        height: fit-content;
         width: 100%;
-        padding: 0.5rem 0;
-        margin-top: 3rem;
-        color: white;
-        background-color: #739dec;
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center; }
+        * body .contenedorServicios .fondoServicios .textoServicios {
+          background-color: rgba(0, 0, 0, 0.4);
+          color: white;
+          font-weight: bold;
+          border: 3px solid white;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          width: 80%;
+          padding: 1.3rem;
+          text-align: center; }
+    * body section {
+      margin-top: 2rem;
+      color: #131346; }
+      * body section .loQueNecesitas {
+        text-align: center;
+        margin: 1rem; }
+      * body section .opcionesServicios {
+        display: flex;
+        justify-content: space-around; }
+        * body section .opcionesServicios .cartaServicios {
+          background-color: #1c1c69;
+          width: 24%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          border-radius: 10px;
+          padding: 1rem;
+          text-align: center;
+          height: 25rem;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          transition: all .2s ease-in-out; }
+          * body section .opcionesServicios .cartaServicios img {
+            width: 70%; }
+        * body section .opcionesServicios .cartaServicios:hover {
+          transform: scale(0.9);
+          background-color: #5984d4; }
+      * body section .contenedorContacto {
+        display: flex;
+        width: 100%; }
+        * body section .contenedorContacto .mapa {
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          gap: 1rem; }
+          * body section .contenedorContacto .mapa .googleMaps {
+            height: 30vw; }
+        * body section .contenedorContacto .mediosContacto {
+          padding: 2rem; }
+          * body section .contenedorContacto .mediosContacto h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+            text-decoration: underline; }
+          * body section .contenedorContacto .mediosContacto .mediosContacto p {
+            text-align: center; }
+          * body section .contenedorContacto .mediosContacto fieldset {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column; }
+            * body section .contenedorContacto .mediosContacto fieldset .mensajero {
+              display: flex;
+              justify-content: space-between; }
+            * body section .contenedorContacto .mediosContacto fieldset input {
+              margin-bottom: 1rem;
+              width: 40%; }
+            * body section .contenedorContacto .mediosContacto fieldset .mensaje {
+              height: 7vw;
+              width: 100%;
+              margin-top: 2rem; }
+      * body section .catalogo {
+        padding: 2rem;
+        width: 100%; }
+        * body section .catalogo .catalogoArticulos {
+          display: grid;
+          width: 100%;
+          height: 100%;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          grid-template-areas: "ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC ventanaArticuloC";
+          gap: 1rem; }
+          * body section .catalogo .catalogoArticulos a {
+            color: white; }
+          * body section .catalogo .catalogoArticulos .ventanaArticuloC {
+            border-radius: 5%;
+            background-color: #1c1c69;
+            padding: 2rem;
+            transition: all .2s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: auto;
+            align-items: center; }
+            * body section .catalogo .catalogoArticulos .ventanaArticuloC img {
+              width: 50%; }
+            * body section .catalogo .catalogoArticulos .ventanaArticuloC a:link {
+              color: white;
+              text-decoration: none; }
+            * body section .catalogo .catalogoArticulos .ventanaArticuloC a:visited {
+              color: white;
+              text-decoration: none; }
+            * body section .catalogo .catalogoArticulos .ventanaArticuloC a:hover {
+              color: white;
+              text-decoration: none; }
+            * body section .catalogo .catalogoArticulos .ventanaArticuloC a:active {
+              color: white;
+              text-decoration: none; }
+            * body section .catalogo .catalogoArticulos .ventanaArticuloC p {
+              color: white; }
+          * body section .catalogo .catalogoArticulos .ventanaArticuloC:hover {
+            transform: scale(0.9);
+            background-color: #5984d4; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    * body .noMobile {
+      display: none; }
+    * body .contenedorIndex .welcome {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      margin: 0.3rem;
+      justify-content: center;
+      align-items: center; }
+      * body .contenedorIndex .welcome .fotoLocal {
+        margin: 0 2rem;
+        padding: 0;
+        width: 100%; }
+      * body .contenedorIndex .welcome .slogan {
+        padding: 0.4rem;
+        width: 100%; }
+    * body .contenedorIndex .catalogoInicio {
+      margin: 1rem 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+      * body .contenedorIndex .catalogoInicio .displayArticulos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; }
+        * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo {
+          width: 100%;
+          padding: 1rem; }
+          * body .contenedorIndex .catalogoInicio .displayArticulos .ventanaArticulo img {
+            width: 50%; }
+    * body .contenedorContacto {
+      flex-direction: column; }
+      * body .contenedorContacto .mapa {
+        width: 100%; }
+      * body .contenedorContacto .mensajero input {
+        width: 50%; }
+      * body .contenedorContacto .mensaje {
+        height: 15vw; }
+    * body section .opcionesServicios {
+      flex-direction: column;
+      margin: 1rem;
+      gap: 1rem; }
+      * body section .opcionesServicios .cartaServicios {
+        width: 100%; }
+        * body section .opcionesServicios .cartaServicios img {
+          width: 70%; }
+    * body .catalogo {
+      padding: 0.1rem; }
+      * body .catalogo .catalogoArticulos {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center; }
+        * body .catalogo .catalogoArticulos .ventanaArticuloC {
+          display: flex;
+          flex-direction: row;
+          padding: 0.5rem;
+          border-radius: 0;
+          gap: 1rem; }
+          * body .catalogo .catalogoArticulos .ventanaArticuloC img {
+            width: 20%;
+            border-radius: 10px; } }
