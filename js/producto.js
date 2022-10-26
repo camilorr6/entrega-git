@@ -1,0 +1,138 @@
+let productos = [
+
+                {
+                    id: 1,
+                    nombre: "Taladro Inalámbrico Percutor 12v 3/8 Ion De Litio Stanley",
+                    descripcion: "Motor de alto rendimiento, Potencia de 12 Volts Max. 2 Baterías de 1.5 Ah, Diseño compacto y liviano, recubierto en goma, 20 posiciones de torque,Transmisión de 2 Velocidades",
+                    precio: 500000,
+                    inventario: 50,
+                    img: "../img/taladro.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 2,
+                    nombre: "Cemento Gris Uso General 50 Kilos Argos",
+                    descripcion: "El Cemento Argos de Uso General es el resultado de la molienda de clínker, yeso y adiciones minerales, en las proporciones óptimas para la obtención de un moderado desarrollo de resistencias tempranas.",
+                    precio: 27000,
+                    inventario: 50,
+                    img: "../img/bolsa-de-cemento.webp",
+                    promocion: 0
+                },
+                {
+                    id: 3,
+                    nombre: "Estucomastic Blanco 18070 Caneca 27kg Pintuco",
+                    descripcion: "Estucomastic 2 en 1 es una masilla plástica lista para usar, con doble funcionalidad ya que puede usarse como estuco interior y como masilla para tratamiento de juntas en placas de yeso (drywall). De excelente adherencia, alto poder de relleno, fácil aplicación y lijado.",
+                    precio: 40000,
+                    inventario: 50,
+                    img: "../img/galon-de-pintura.jpg",
+                    promocion: 1
+                },
+                {
+                    id: 4,
+                    nombre: "Combo Laguna Blanco C/Pedestal C/Asiento Boton Superior Corona",
+                    descripcion: "El Sanitario Laguna cuenta con diseño tradicional de dos piezas (tanque y taza), el perfil de su taza es redondo y tiene una altura tradicional para uso familiar, su sistema de accionamiento es de botón sencillo tipo push, que te garantizará una descarga eficiente en cada uso.",
+                    precio: 332484,
+                    inventario: 50,
+                    img: "../img/inodoro.jpg",
+                    promocion: 1
+                },
+                {
+                    id: 5,
+                    nombre: "Teja Ondulada N° 4 P7 Eternit",
+                    descripcion: "Para cubiertas de todo tipo de construcción, o también un cubrimiento de fachadas.",
+                    precio: 20000,
+                    inventario: 50,
+                    img: "../img/teja.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 6,
+                    nombre: "Lavaplatos Radiante Acero Inoxidable Poceta 100 X 52 Socoda",
+                    descripcion: "Lavaplatos en acero inoxidable con 2 funciones en una: lavado, zona de trabajo con declive para escurrir el agua a la poceta. Ofrece un espacio funcional y cómodo para trabajar, posee un lavaplatos amplio con 13.7cm de profundidad para evitar salpiques de agua y con mayor amplitud para lavar, y una zona de trabajo con declive para escurrir el agua al tanque.",
+                    precio: 115000,
+                    inventario: 50,
+                    img: "../img/lavaplatos-radiante-acero-inoxidable-poceta-derecha-100-x-52-monocontrol-socoda.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 7,
+                    nombre: "Cerradura De Sobreponer 106-70 Izquierda 2 Bulones Yale",
+                    descripcion: "Para puertas de 30mm a 70mm de espesor, caja cantonera y contratapa de soldar en acero, sistema antipalanca, pestillo en zamak, sistema antipalanca, cubierta adicional contra aperturas forzosas.",
+                    precio: 100000,
+                    inventario: 50,
+                    img: "../img/cerradura-de-sobreponer-107-70-izquierda-2-bulones-yale.jpg",
+                    promocion: 1
+                },
+                {
+                    id: 8,
+                    nombre: "Sika Emulsion 5/1 Asfaltica",
+                    descripcion: "La Emulsión Asfáltica Sika® forma con el producto SikaFelt (tela de fibra de poliéster, refuerzo) un sistema para impermeabilizar.",
+                    precio: 173000,
+                    inventario: 50,
+                    img: "../img/sika-emulsion-51-asfaltica-x-18-kilos.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 9,
+                    nombre: "Protector De Voltaje Enchufable Nevera 120V Nicomar.",
+                    descripcion: "Ideal para el hogar, industria y oficina, protegiendo sus equipos contra los picos de voltaje que encontramos en la red eléctrica. El protector electrónico de voltaje ha sido diseñado para evitar que los disturbios presentes en la red eléctrica puedan afectar el buen funcionamiento de los equipos.",
+                    precio: 26000,
+                    inventario: 50,
+                    img: "../img/protector-de-voltaje-enchufable-nevera-120v-nicomar.jpg",
+                    promocion: 1
+                },
+                {
+                    id: 10,
+                    nombre: "Cerradura Yale Digital Pantalla Tactil ",
+                    descripcion: "La cerradura digital de embutir YMF30 con capacidad para 40 tarjetas y 30 códigos pin. Además puede ser operada desde el celular a través de Yale Connect hub. Medidas 320x68.",
+                    precio: 1600000,
+                    inventario: 50,
+                    img: "../img/cerradura-digital-pantalla-tactil-ymf30-yale.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 11,
+                    nombre: "Escalera Aluminio Tijera 3 Peldaños 90kg (Verde) Escalumex",
+                    descripcion: "Disfruta de la máxima calidad y tecnología con la escalera multiuso aluminum, Rígidas y de alta resistencia, Estructura totalmente en aluminio, 3 Peldaños planos en aluminio antideslizante, Cabezote superior en Aluminio, Zapatas en caucho antideslizante acanaladas.",
+                    precio: 160000,
+                    inventario: 50,
+                    img: "../img/escalera-aluminio-tijera-3-peldanos-1-22-mts-bstl-4-tipo-iii-90kg-verde-escalumex.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 12,
+                    nombre: "Pulidora Profesional 7'' 8500 2200 W RPM Dewalt",
+                    descripcion: "Potente motor protegido contra la abrasión que aumenta su durabilidad. Mango auxiliar de dos posiciones para mayor comodidad. Traba de eje para un sencillo cambio de disco. Ventana para fácil acceso y reemplazo de carbones.",
+                    precio: 750000,
+                    inventario: 50,
+                    img: "../img/pulidora-profesional-7-8500-2200-w-rpm-dewalt-dwe491-b3-.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 13,
+                    nombre: "Subconjunto Grival Griferia Lavaplato Triceta",
+                    descripcion: "Grifería plástica de 8 pulgadas para cocina inspirada en el proceso natural y orgánico de la erosión aluvial.",
+                    precio: 70000,
+                    inventario: 50,
+                    img: "../img/subconjunto-grival-griferia-lavaplato-sencilla-triceta-aluvia-xunidad.jpg",
+                    promocion: 0
+                },
+                {
+                    id: 14,
+                    nombre: "Bombillo Toledo 9w Dl Con Sensor Sylvania",
+                    descripcion: "Bombilla LED en formato bulbo para iluminación domestica con sensor de movimiento incorporado, su tecnología y diseño proporciona una mejor iluminación interior. Ahorra hasta el 90% de energía comparado con bombillas incandescentes.",
+                    precio: 16000,
+                    inventario: 50,
+                    img: "../img/bombillo-toledo-9w-dl-con-sensor-sylvania.jpg",
+                    promocion: 1 
+                },
+                {
+                    id: 15,
+                    nombre: "Cinta N° 23 Aislante Autofundente 18mmx9.1m",
+                    descripcion: "Cinta eléctrica autofundente profesional scotch para alto voltaje.",
+                    precio: 20000,
+                    inventario: 50,
+                    img: "../img/cinta-n-23-aislante-autofundente-18mmx91m-3m.jpg",
+                    promocion: 0
+                },
+            ]
