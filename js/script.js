@@ -2,11 +2,13 @@ let catalogo = document.getElementById('catalogoArticulos')
 
 
 
-let generarCatalogo = () => {
+let crearCatalogo = () => {
     return (catalogo.innerHTML = productos.map((producto)=>{
         
-        let {id, nombre, descripcion, precio,  inventario, img,} = producto
+        let {id, nombre, descripcion, precio, img,} = producto
         
+        let buscar= carrito.find((x)=> x.id === id) || [];
+
         return `
         <div id ="idProducto-${id}" class="ventanaArticuloC">
                         <img src=${img} alt="" class="fotoArticulo">
@@ -16,7 +18,7 @@ let generarCatalogo = () => {
                             <p>$${precio}</p>
                         </a>
                             <i onclick="reducirCantidad(${id})" class="value-button">-</i>
-                            <div id=${id} class="cantidad">0</div>
+                            <div id=${id} class="cantidad">${buscar.item === undefined ? 0 : buscar.item}</div>
                             <i onclick="aumentarCantidad(${id})"  class="value-button">+</i>
                     </div>
         `
@@ -24,7 +26,7 @@ let generarCatalogo = () => {
     
 }
 
-generarCatalogo()
+crearCatalogo()
 
 let aumentarCantidad = (id)=>{
     let productoSeleccionado = id
@@ -39,6 +41,8 @@ let aumentarCantidad = (id)=>{
     });
     } else {buscarCarrito.item +=1;}
 
+    localStorage.setItem("info", JSON.stringify(carrito))
+
     actualizarCantidad(productoSeleccionado.id)
 
 
@@ -50,10 +54,15 @@ let reducirCantidad = (id) =>{
 
     let buscarCarrito = carrito.find((p)=>p.id === productoSeleccionado.id);
 
-    if (search.item === 0) return;
+    if(buscarCarrito === undefined) return;
+    else if (buscarCarrito.item === 0) return;
     else {buscarCarrito.item -=1;}
 
+    carrito = carrito.filter((p)=>p.item !== 0)
+
     actualizarCantidad(productoSeleccionado.id)
+
+    localStorage.setItem("info", JSON.stringify(carrito))
 
 }
 
@@ -61,5 +70,16 @@ let actualizarCantidad = (id) => {
     let buscarCarrito = carrito.find((p)=>p.id ===id);
 
     document.getElementById(id).innerHTML = buscarCarrito.item;
+
+    calculo()
     
 }
+
+let calculo = ()=>{
+    let cantidadCarrito = document.getElementById("cantidadCarrito");
+
+    cantidadCarrito.innerHTML = carrito.map((x)=>x.item).reduce((x,y)=>x+y, 0)
+     
+}
+
+calculo()
