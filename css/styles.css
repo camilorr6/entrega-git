@@ -377,3 +377,7 @@
       padding: 1rem; }
       body .catalogo .catalogoArticulos .ventanaArticuloC img {
         width: 50%; } }
+  .division {
+    color: gray;
+  }
+
