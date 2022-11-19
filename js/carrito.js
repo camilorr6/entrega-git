@@ -165,8 +165,20 @@ let calcularTotal= ()=>{
             return resp.json()
         })
         .then(function(productos){
-        console.log(productos)
-        }}
+            let total = carrito.map((x)=>{
+                let{item,id}= x
+                    
+                let buscar = productos.find((x)=>x.id === id) || []
+                
+                return item*buscar.precio
+              
+                }).reduce((x,y)=>x+y, 0)
+              
+                estadoCarrito.innerHTML = `
+                <button type="button" class="btn btn-danger mb-2 mx-auto d-flex justify-content-center"  onclick="borrarCarrito()" style="width: 200px;">Eliminar todos los Productos</button><br><button type="button" class="btn btn-success mb-2 mx-auto d-flex justify-content-center" onclick="confirmarPago()" style="width: 200px">Ir al Pago</button><br><h2 class="mb-2 mx-auto" "><strong>El total de tu compra es: $ ${total}</strong></h2>
+              
+                `
+        })}
     else return
 }
 
